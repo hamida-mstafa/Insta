@@ -1,5 +1,7 @@
 from django.db import models
-
+from django.contrib.auth.models import User
+from django.urls import reverse
+from user.models import Profile
 # Create your models here.
 class Image(models.Model):
     image = models.ImageField(upload_to='images/')
