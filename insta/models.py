@@ -17,3 +17,9 @@ class Image(models.Model):
         return reverse('home')
     def save_image(self):
         self.save()
+
+    @classmethod
+    def retrieve_all(cls):
+        all_objects = Image.objects.all()
+        for item in all_objects:
+            return item;
