@@ -25,22 +25,20 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'vnw1_lfc8=0@z$3g@fo*)u=3(!8nj6mzy105bs1v**0(f%$3@5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'instagram.apps.InstagramConfig',
+    'insta',
     'crispy_forms',
     'bootstrap4',
-    'friendship',
-    'user.apps.UserConfig',
+    'friendship', 'user.apps.UserConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
