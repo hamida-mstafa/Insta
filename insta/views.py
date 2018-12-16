@@ -48,7 +48,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class create_comment(CreateView):
     model=Comment
-    template_name= 'instagram/image_list.html' # <app>/<model>_<view_type>.html
+    template_name= 'instagram/image_list.html'
 
     context_object_name = 'comments'
     ordering = ['-posted_on']
@@ -76,8 +76,6 @@ def search_results(request):
     if 'searchItem' in request.GET and request.GET["searchItem"]:
         search_term = request.GET.get("searchItem")
         searched_user = Profile.search_by_username(search_term)
-        # user = User.objects.get(username=searched_user)
-        # user_images = Profile.objects.get(user=searched_user)
         message = f"{search_term}"
         context = {
             'message': message,
