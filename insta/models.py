@@ -42,3 +42,12 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.comment
+class Like(models.Model):
+    post = models.ForeignKey('Image')
+    user = models.ForeignKey(User)
+
+    class Meta:
+        unique_together = ("post", "user")
+
+    def __str__(self):
+        return 'Like: ' + self.user.username + ' ' + self.post.title
