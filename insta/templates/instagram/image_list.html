@@ -10,7 +10,7 @@
                 <div class="card view-update {{ post.pk }}">
                     <div class="card__panel-head">
                         <div class="poster__info">
-                            <a href="/instagram/prof/{{post.user_profile.user.username}}" style="text-decoration:none; font-size: 16px; display:inline-block" class="user">
+                            <a href="/insta/prof/{{post.user_profile.user.username}}" style="text-decoration:none; font-size: 16px; display:inline-block" class="user">
 
                                 <img class="poster__profilepic" src="{{ post.user_profile.profile_path.url }}">
                               {{ post.author.username }}
@@ -30,7 +30,7 @@
                         </a>
                         <ul class="comment-list">
                           <li class="comment-list__comment">
-                            <a class="user" href="/instagram/prof/{{post.user_profile.user.username}}">
+                            <a class="user" href="/insta/prof/{{post.user_profile.user.username}}">
                               {{ post.user_profile.user.username }}
                             </a>
                             <span class="comment">{{ post.title }}</span>
@@ -39,7 +39,7 @@
                           <a class="view-more"></a>
                           {% for comment in post.comment_set.all %}
                             <li class="comment-list__comment">
-                              <a href="/instagram/prof/{{post.user_profile.user.username}}" class="user">
+                              <a href="/insta/prof/{{post.user_profile.user.username}}" class="user">
                                 {{ comment.user.username }}
                               </a>
                               <span class="comment">{{ comment.comment }}</span>

@@ -9,7 +9,7 @@
   </div>
   {% for profile in profiles %}
     <div class="follow__card" id="{{ profile.pk }}">
-      
+
       {% if profile.profile_path %}
         <img class="picture-circle--small" src="{{ profile.profile_path.url }}">
       {% else %}

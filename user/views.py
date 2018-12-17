@@ -10,7 +10,7 @@ from django.template.loader import render_to_string
 from .tokens import account_activation_token
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
-from instagram.models import User
+from insta.models import User
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)

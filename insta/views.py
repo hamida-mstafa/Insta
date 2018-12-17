@@ -24,7 +24,7 @@ def home(request):
 
 class PostListView(LoginRequiredMixin,ListView):
     model=Image
-    template_name= 'instagram/image_list.html'
+    template_name= 'insta/image_list.html'
     context_object_name = 'posts'
     ordering = ['-time_created']
 
@@ -33,7 +33,7 @@ class PostListView(LoginRequiredMixin,ListView):
 
 class PostCreateView(LoginRequiredMixin,CreateView):
     form_class = PhotoUploadModelForm
-    template_name = 'instagram/image_upload.html'
+    template_name = 'insta/image_upload.html'
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -140,7 +140,7 @@ def followers(request, username):
         'profiles': profiles,
     }
 
-    return render(request, 'instagram/follow_list.html', context)
+    return render(request, 'insta/follow_list.html', context)
 
 @login_required(login_url='/accounts/login/')
 def following(request, username):
@@ -152,7 +152,7 @@ def following(request, username):
         'header': 'Following',
         'profiles': profiles
     }
-    return render(request, 'instagram/follow_list.html', context)
+    return render(request, 'insta/follow_list.html', context)
 @login_required(login_url='/accounts/login/')
 def profile_settings(request, username):
     user = User.objects.get(username=username)
@@ -172,11 +172,11 @@ def profile_settings(request, username):
         'user': user,
         'form': form
     }
-    return render(request, 'instagram/profile_settings.html', context)
+    return render(request, 'insta/profile_settings.html', context)
 
 
 def follow(request,user_id):
     res = AjaxFollow(request.Get,request.user)
     # context = { 'ajax_output': ajax_output()}
     context = { 'ajax_output': ajax_output()}
-    return render(request,'instagram/profile.html',context)
+    return render(request,'insta/profile.html',context)

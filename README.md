@@ -1,5 +1,5 @@
 # Insta
-  Insta is a website dedicated to sharing photography entirely designed with Instagram simulation.
+  Insta is a website dedicated to sharing photography entirely designed with insta simulation.
 
 
 ## Author

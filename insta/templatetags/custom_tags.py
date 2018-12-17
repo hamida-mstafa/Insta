@@ -1,7 +1,7 @@
 import re
 from django import template
 from django.core.urlresolvers import reverse, NoReverseMatch
-from instagram.models import Like
+from insta.models import Like
 from user.models import Profile
 register = template.Library()
 

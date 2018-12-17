@@ -26,16 +26,16 @@
 </script>
 <nav class="navbar">
         {%if request.user.is_authenticated %}
-    <section class="logo-section"><a href="/instagram/"><img class="logo" src="https://seeklogo.com/images/I/instagram-new-2016-glyph-logo-84CB825424-seeklogo.com.png"/></a> 
-    <div></div><a href="/instagram/"><img class="logoname" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2000px-Instagram_logo.svg.png"/></a> 
+    <section class="logo-section"><a href="/insta/"><img class="logo" src="https://seeklogo.com/images/I/insta-new-2016-glyph-logo-84CB825424-seeklogo.com.png"/></a>
+    <div></div><a href="/insta/"><img class="logoname" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/insta_logo.svg/2000px-insta_logo.svg.png"/></a>
   </section>
   <form action="{% url 'search_results' %}"  class="search-section">
     <input class="input-search" type="search" name="searchItem" placeholder="search user....."/>
   </form>
   <section class="icons-section">
     <a class="fa fa-heart" href="#"></a>
-    <a class="fa fa-user" href="/instagram/prof/{{user.username}}"></a>
-    <a href="/instagram/signout/">Log out</a>
+    <a class="fa fa-user" href="/insta/prof/{{user.username}}"></a>
+    <a href="/insta/signout/">Log out</a>
 </section>
 {% endif %}
 

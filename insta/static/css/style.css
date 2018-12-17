@@ -35,7 +35,7 @@
   width: 430px;
   height: 380px;
   background-color: white;
-  padding: 60px; 
+  padding: 60px;
 
 }
 
@@ -278,8 +278,8 @@ a.article-title:hover {
 .image_inner_container{
   border-radius: 50%;
   padding: 5px;
- background: #833ab4; 
- background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4); 
+ background: #833ab4;
+ background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
  background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
 }
 .image_inner_container img{
@@ -366,7 +366,7 @@ a.article-title:hover {
             .comment-list__comment .user:hover {
               color: #4d4d4d;
               text-decoration: none; }
-      
+
       .likes-timestamp-row {
         margin-top: 15px; }
         .likes-timestamp-row > div {
@@ -394,7 +394,7 @@ a.article-title:hover {
                 width: 100%;
                 border: none;
                 outline: none; }
-          
+
 
 /*** Mixins & Default Styles ***/
 * {
@@ -467,7 +467,7 @@ img {
 .unfollow-user:active, .unfollow-user:focus {
       background-color: #5a9a40;
       border-color: #5a9a40; }
-  
+
   .follow-user, .generic-button {
     background-color: #fff;
     border-color: #3897f0;
@@ -751,7 +751,7 @@ img {
 
 The following code will only run if your browser supports CSS grid.
 
-Remove or comment-out the code block below to see how the browser will fall-back to flexbox & floated styling. 
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox & floated styling.
 
 */
 

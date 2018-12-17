@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 from user import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^instagram/',include('instagram.urls')),
+    url(r'^insta/',include('insta.urls')),
     url(r'^$',user_views.register,name='register'),
     url(r'^login/$', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     url(r'profile/$', user_views.profile, name='profile'),
