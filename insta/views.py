@@ -100,7 +100,7 @@ def profile(request, username):
     }
     print(profile.user.username)
     print(profile.image)
-    return render(request, 'instagram/profile.html', context)
+    return render(request, 'insta/profile.html', context)
 @login_required(login_url='/accounts/login/')
 def post(request, pk):
     post = Image.objects.get(pk=pk)
@@ -115,12 +115,10 @@ def post(request, pk):
         'post': post,
         'liked': liked
     }
-    return render(request, 'instagram/post.html', context)
+    return render(request, 'insta/post.html', context)
 
 
 def likes(request, pk):
-    #likes = IGPost.objects.get(pk=pk).like_set.all()
-    #profiles = [like.user.userprofile for like in likes]
 
     post = Image.objects.get(pk=pk)
     profiles = Like.objects.filter(post=post)
@@ -129,7 +127,7 @@ def likes(request, pk):
         'header': 'Likes',
         'profiles': profiles
     }
-    return render(request, 'instagram/follow_list.html', context)
+    return render(request, 'insta/follow_list.html', context)
 
 
 def followers(request, username):
