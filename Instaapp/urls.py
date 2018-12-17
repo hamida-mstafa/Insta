@@ -24,11 +24,13 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^insta/',include('insta.urls')),
     url(r'^$',user_views.register,name='register'),
-    url(r'^login/$', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    url(r'^login/$', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
     url(r'profile/$', user_views.profile, name='profile'),
     url(r'^friendship/', include('friendship.urls')),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
             views.activate, name='activate'),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
+
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

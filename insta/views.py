@@ -177,6 +177,6 @@ def profile_settings(request, username):
 
 def follow(request,user_id):
     res = AjaxFollow(request.Get,request.user)
-    # context = { 'ajax_output': ajax_output()}
+
     context = { 'ajax_output': ajax_output()}
     return render(request,'insta/profile.html',context)
