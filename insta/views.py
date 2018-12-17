@@ -24,8 +24,7 @@ def home(request):
 
 class PostListView(LoginRequiredMixin,ListView):
     model=Image
-    template_name= 'instagram/image_list.html' # <app>/<model>_<view_type>.html
-
+    template_name= 'instagram/image_list.html'
     context_object_name = 'posts'
     ordering = ['-time_created']
 
@@ -48,7 +47,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class create_comment(CreateView):
     model=Comment
-    template_name= 'instagram/image_list.html'
+    template_name= 'insta/image_list.html'
 
     context_object_name = 'comments'
     ordering = ['-posted_on']
