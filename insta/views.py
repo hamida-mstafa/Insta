@@ -24,12 +24,9 @@ def home(request):
 
 class PostListView(LoginRequiredMixin,ListView):
     model=Image
-    template_name= 'insta/image_list.html'
+    template_name= 'instagram/image_list.html'
     context_object_name = 'posts'
     ordering = ['-time_created']
-
-
-
 
 class PostCreateView(LoginRequiredMixin,CreateView):
     form_class = PhotoUploadModelForm
@@ -47,7 +44,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class create_comment(CreateView):
     model=Comment
-    template_name= 'insta/image_list.html'
+    template_name= 'instagram/image_list.html'
 
     context_object_name = 'comments'
     ordering = ['-posted_on']
@@ -172,7 +169,7 @@ def profile_settings(request, username):
         'user': user,
         'form': form
     }
-    return render(request, 'insta/profile_settings.html', context)
+    return render(request, 'instagram/profile_settings.html', context)
 
 
 def follow(request,user_id):

@@ -175,3 +175,4 @@ EMAIL_PORT = config('EMAIL_PORT')
 # EMAIL_HOST_USER ='hamidamstafa@gmail.com'
 # EMAIL_HOST_PASSWORD ='hamramsal'
 # EMAIL_PORT =587
+# LOGIN_REDIRECT_URL="{% url 'home' %}"

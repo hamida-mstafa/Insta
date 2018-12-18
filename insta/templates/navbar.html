@@ -26,16 +26,16 @@
 </script>
 <nav class="navbar">
         {%if request.user.is_authenticated %}
-    <section class="logo-section"><a href="/Insta/"><img class="logo" src="https://seeklogo.com/images/I/insta-new-2016-glyph-logo-84CB825424-seeklogo.com.png"/></a>
-    <div></div><a href="/Insta/"><img class="logoname" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/insta_logo.svg/2000px-insta_logo.svg.png"/></a>
+    <section class="logo-section"><a href="/Insta/"><img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSejjnY0rseCvIPzUT_946niFrgjwdL1H6DAt7Mzfpgpng4RrgtKw"/></a>
+    <div></div><a href="/Insta/"><img class="logoname" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png"/></a>
   </section>
   <form action="{% url 'search_results' %}"  class="search-section">
     <input class="input-search" type="search" name="searchItem" placeholder="search user....."/>
   </form>
   <section class="icons-section">
     <a class="fa fa-heart" href="#"></a>
-    <a class="fa fa-user" href="/Insta/prof/{{user.username}}"></a>
-    <a href="/Insta/signout/">Log out</a>
+    <a class="fa fa-user" href="profile/{{user.username}}/edit/"> </a>
+    <a href="/signout/">Log out</a>
 </section>
 {% endif %}
 
