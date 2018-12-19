@@ -19,8 +19,8 @@ from decouple import config,Csv
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 MODE=config("MODE", default="dev")
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+SECRET_KEY=config('SECRET_KEY')
+DEBUG=config('DEBUG', default=False, cast=bool)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -161,10 +161,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-try:
-    from local_settings import *
-except ImportError as e:
-    pass
+# try:
+#     from local_settings import *
+# except ImportError as e:
+#     pass
 
 EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 EMAIL_HOST = config('EMAIL_HOST')
