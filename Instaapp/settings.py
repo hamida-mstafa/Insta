@@ -156,6 +156,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -169,10 +171,4 @@ EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = config('EMAIL_PORT')
-# django_heroku.settings(locals())
-# EMAIL_USE_TLS =True
-# EMAIL_HOST ='smtp.gmail.com'
-# EMAIL_HOST_USER ='hamidamstafa@gmail.com'
-# EMAIL_HOST_PASSWORD ='hamramsal'
-# EMAIL_PORT =587
-# LOGIN_REDIRECT_URL="{% url 'home' %}"
+django_heroku.settings(locals())
