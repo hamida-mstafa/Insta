@@ -175,7 +175,7 @@ ul {
 }
 .navbar .logo-section {
   display: flex;
-  margin-right: 50px;
+  align-items: center;
   align-items: center;
 }
 .navbar .logo-section div {

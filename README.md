@@ -20,7 +20,7 @@ As a user of the application you will be able to:
 
 ### Installing
 
-*** To view the app.Visit -> [insta](http://instamids.herokuapp.com/)
+* To view the app.Visit -> [insta](http://instamids.herokuapp.com/)
 
 1. Clone this repo: git clone https://github.com/hamida-mstafa/insta.git.
 2. The repo comes in a zipped or compressed format. Extract to your prefered location and open it.

@@ -1,29 +1,6 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
   crossorigin="anonymous">
-<script>
-(function($) {
-    "use strict";
-
-    var $navbar = $("#navbar"),
-        y_pos = $navbar.offset().top,
-        height = $navbar.height();
-
-    $(document).scroll(function() {
-        var scrollTop = $(this).scrollTop();
-
-        if (scrollTop > y_pos + height) {
-            $navbar.addClass("navbar-fixed").animate({
-                top: 0
-            });
-        } else if (scrollTop <= y_pos) {
-            $navbar.removeClass("navbar-fixed").clearQueue().animate({
-                top: "-48px"
-            }, 0);
-        }
-    });
-
-})
-</script>
+  <script src="scripts.js"></script>
 <nav class="navbar">
         {%if request.user.is_authenticated %}
     <section class="logo-section"><a href="/Insta/"><img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSejjnY0rseCvIPzUT_946niFrgjwdL1H6DAt7Mzfpgpng4RrgtKw"/></a>
@@ -33,7 +10,7 @@
     <input class="input-search" type="search" name="searchItem" placeholder="search user....."/>
   </form>
   <section class="icons-section">
-    <a class="fa fa-heart" href="#"></a>
+    <a class="fa fa-heart" href="/"></a>
     <a class="fa fa-user" href="profile/{{user.username}}/edit/"> </a>
     <a href="/signout/">Log out</a>
 </section>
